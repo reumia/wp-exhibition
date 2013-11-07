@@ -1,0 +1,35 @@
+.content
+  a:link
+    color: $brand-color
+  a:visited
+    color: $asbestos-color
+  a:hover
+    color: #fff
+    background-color: $brand-color
+    padding: 1px 0
+    text-decoration: none
+
+// body
+.body
+  margin-bottom: $base-spacing-unit +px
+
+// alist = article-list
+.alist__li
+  margin-bottom: 0.5em
+.alist__li, .post-meta, .yarpp-related
+  a
+    &:link
+      color: $midnight-blue-color
+    &:visited
+      color: $asbestos-color
+    &:hover
+      color: $brand-color
+      background-color: transparent
+      text-decoration: none
+
+.post-meta 
+  font-size: 0.9em
+  @extend %sass-margin-bottom
+  > ul
+    margin: 0
+    margin-left: $base-spacing-unit+px

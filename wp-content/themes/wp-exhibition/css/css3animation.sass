@@ -1,0 +1,21 @@
+/*!
+ * http://daneden.me/animate/
+ * custom build
+ * FadeInDown
+
+.animated
+  @include vendor(animation-fill-mode, both)
+  @include vendor(animation-duration, 0.2s)
+  &.hinge
+    @include vendor(animation-duration, 0.2s)
+
+@include keyframe(fadeInDown)
+  0%
+    opacity: 0
+    @include vendor(transform, translateY(-20px)) 
+  100%
+    opacity: 1
+    @include vendor(transform, translateY(0)) 
+
+.fadeInDown
+  @include vendor(animation-name, fadeInDown)

@@ -1,0 +1,1 @@
+sass --watch style.sass:style.css --style expanded -E UTF-8

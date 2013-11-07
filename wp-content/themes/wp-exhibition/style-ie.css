@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/* ie7에서는 영문 폰트가 맨 앞에 있으면 한글 폰트는 브라우저 기본 폰트(굴림)가 적용된다. */
+.ie7 body {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "nanumgothic", sans-serif; 
+}

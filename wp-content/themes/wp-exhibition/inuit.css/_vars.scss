@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    $VARS
+\*------------------------------------*/
+/**
+ * Set up project-specific variables here which are then used throughout your
+ * build. These variables are automatically picked up by inuit.css so you should
+ * never need to modify any framework code.
+ */
+
+
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+$debug-mode:        false;
+
+
+/**
+ * Base stuff
+ */
+$base-font-size:    14!default;
+$base-line-height:  $base-font-size*1.6!default;
+
+$line-height-ratio: $base-line-height / $base-font-size;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        4!default;
+
+
+/**
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+
+
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$giga-size:         $base-font-size*6!default;
+$mega-size:         $base-font-size*4.5!default;
+$kilo-size:         $base-font-size*3!default;
+
+$h1-size:           $base-font-size*2.25!default;
+$h2-size:           $base-font-size*1.875!default;
+$h3-size:           $base-font-size*1.5625!default;
+$h4-size:           $base-font-size*1.25!default;
+$h5-size:           $base-font-size*1!default;
+$h6-size:           $base-font-size*1!default;
+
+$milli-size:        $base-font-size*0.75!default;
+$micro-size:        $base-font-size*0.625!default;
+
+/**
+ * flat ui color 
+ * http://designmodo.com/demo/flat-ui/
+ */
+$clouds-color:      #ECF0F1!default;
+$asbestos-color:    #7F8C8D!default;
+$wet-asphalt-color: #34495E!default;
+$midnight-blue-color: #2C3E50!default;
+$emerald-color:     #2ECC71!default;
+$nephritis-color:   #27AE60!default;
+
+/**
+ * Brand stuff
+ */
+$brand-color:       $emerald-color!default;
+$brand-color2:      $nephritis-color!default;
+$brand-face:        Arial,'Apple SD Gothic Neo','Malgun Gothic','nanumgothic',sans-serif!default;
+
+
+/**
+ * We need to supply a full code font-stack in order to combat this:
+ * jsfiddle.net/csswizardry/uD6UW
+ */
+$code-face:         Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace!default;

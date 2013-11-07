@@ -1,0 +1,154 @@
+@charset "UTF-8"
+/*!
+ *Theme Name: Mytory Basic Theme
+ *Theme URI: https://github.com/mytory/wp-mytory-basic-theme
+ *Description: Mytory가 만든 inuit.css 기반의 사이트 제작용 기본 템플릿 테마
+ *Author: Ahn, Hyoung-woo
+ *Author URI: http://mytory.net/
+ *Version: 1.0
+ *Tags: 1-column, sidebar
+ *License: GNU General Public License v2 or later
+ *License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * 이 테마는 아주 기본적인 템플릿 파일과 스타일만 포함하고 있는 테마다. 커스터마이징이 많은 웹사이트를 만들 때 출발점으로 삼으려고 만든 것이다.
+ * 기본적으로는 twentytwelve 테마를 참고해서 만들었으나, 거의 흔적은 남아있지 않을 것이다.
+ * inuit.css로 레이아웃을 잡았고, 버튼 스타일로는 beautons를 사용했다.
+
+/**
+ * Setup
+@import "inuit.css/vars"
+@import "inuit.css/inuit"
+@import "css/beautons"
+@import "css/header"
+@import "css/content"
+@import "css/site-footer"
+@import "css/paging-nav"
+@import "css/main-nav"
+@import "css/css3animation"
+
+.top-blank
+
+body
+  font-family: $brand-face
+  word-wrap: break-word
+a
+  color: $midnight-blue-color
+  font-weight: bold
+ul,ol,dd
+  @media screen and (max-width: 500px)
+    margin-left: $base-spacing-unit +px
+    margin-left: $base-spacing-unit +px / $base-font-size +rem
+blockquote
+  padding-left: 1rem
+  color: #666
+
+// 아이폰이 덮어쓰는 버튼 스타일 초기화
+button, .btn, input
+  -webkit-appearance: none
+  margin: 0
+  border: none
+
+input, textarea
+  border: 1px solid #ddd
+  border-radius: $brand-round+px
+
+input[type=checkbox], input[type=radio], input[type=button], input[type=submit], input[type=image], input[type=file], input[type=reset]
+  border: none
+
+.top-blank
+  height: $base-spacing-unit+px
+
+.body-width
+  margin-right: auto
+  margin-left: auto
+  padding: 0 20px
+  max-width: 700px
+
+.brand-line
+  border-top: 1px solid $brand-color
+  @extend %sass-margin-bottom
+.wet-asphalt-line
+  border-top: 1px solid $wet-asphalt-color
+
+.main-nav, .body, .header__row1
+  @extend .body-width
+
+// custom
+.post-title
+  h1
+    @media screen and (max-width: 500px)
+      font-size: 1.5rem
+#comment
+  @extend .one-whole
+  @include vendor(box-sizing, border-box)
+#commentform
+  #submit
+    @extend .btn, .btn--full, .btn--positive
+    background-color: $midnight-blue-color
+.btn
+  background-color: $midnight-blue-color
+.content img, .wp-caption
+  max-width: 100%!important
+.content
+  word-wrap: break-word
+  pre
+    font-size: 0.8em
+    padding: 1em
+    border-radius: $brand-round+px
+    color: #fff
+    background-color: $wet-asphalt-color
+
+// 반응형 비디오.
+.video-container
+  max-width: 560px
+  margin: 0 auto
+.video-container__inner
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+.video-container
+  iframe, object, embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.sidebar-wrapper
+  padding: $base-spacing-unit +px
+  padding-bottom: 0
+  background-color: #ECF0F1
+.sidebar
+  @extend .body-width
+  li
+    list-style-type: none
+.sidebar__one
+  margin: 0
+  padding: 0
+  .widget
+    list-style-type: none
+    margin-bottom: $base-spacing-unit+px
+  ul
+    margin: 0
+  li li 
+    a
+      display: block
+      @include truncate(100%)
+    .post-date
+      display: block
+      text-align: right
+      font-size: 12px
+      color: #999
+      &:before
+        content: "- "
+.sidebar__column
+  @media screen and (max-width: 600px)
+    width: 100%
+    margin-bottom: $base-spacing-unit +px
+.aligncenter
+  margin: 0 auto
+  text-align: center
+.wp-caption-text
+  font-size: 0.9em
+  color: #666

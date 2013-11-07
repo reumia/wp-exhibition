@@ -1,0 +1,2 @@
+<?
+include 'single.php';

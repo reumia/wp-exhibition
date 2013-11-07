@@ -1,0 +1,48 @@
+.main-nav-wrapper
+  background: $brand-color
+  
+.main-nav
+  a:hover
+    text-decoration: none
+
+.main-nav__li1 > a
+  color: #fff
+  padding-top: 16px
+  padding-bottom: 16px
+  font-weight: normal 
+
+.main-nav__li1 > a:hover, .current-menu-item > a
+  // background-color: $emerald-color
+  background-color: $wet-asphalt-color
+  @include vendor(box-sizing, border-box)
+
+.main-nav__li1--has-child 
+  position: relative
+  > a:after
+    content: ' ▼'
+    font-size: 10px
+
+.sub-menu
+  display: none
+  position: absolute
+  width: 200px
+  background: white
+  border: 1px solid $wet-asphalt-color
+  border-radius: $brand-round+px
+  margin: 0
+  text-align: left
+  li.menu-item
+    list-style: none
+  a
+    color: $wet-asphalt-color
+    padding: 1em
+    display: block
+    &:hover
+      background: $wet-asphalt-color
+      color: #fff
+
+.main-nav__li1--has-child:hover
+  .sub-menu
+    display: block
+    @extend .animated
+    @extend .fadeInDown
